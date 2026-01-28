@@ -28,13 +28,27 @@ function handlceClickDraw(){
         
         const remainingCards = data.remaining
         document.getElementById('header').innerText=`Remaining Cards: ${remainingCards}`
+
+        const winner = determineWinner(data.cards[0],data.cards[1]);
         if(remainingCards===0){
             Draw.disabled=true
-            Draw.innerText="No More Cards"
-            document.getElementById('header').innerText=`Game Over! No More Cards Left`
+            Draw.innerText="Game Over! No More Cards Left"
+            document.getElementById('header').innerText=`${winner} is the Winner!`
         }
         
         
     })
+function determineWinner(card1,card2){
+    const valueOptions = ["2","3","4","5","6","7","8","9","10","JACK","QUEEN","KING","ACE"]
+    const card1ValueIndex = valueOptions.indexOf(card1.value)
+    const card2ValueIndex = valueOptions.indexOf(card2.value)
+    if(card1ValueIndex>card2ValueIndex){
+        return "Sara Wins!"
+    }else if(card1ValueIndex<card2ValueIndex){
+        return "Surya Wins!"
+    }else{
+        return "It's a Tie!"
+    }
+}
 }
 Draw.addEventListener("click",handlceClickDraw);
