@@ -26,6 +26,13 @@ function handlceClickDraw(){
         <img src="${data.cards[1].image}"/>
         `
         
+        remainingCards = data.remaining
+        if(remainingCards===0){
+            Draw.disabled=true
+            Draw.innerText="No More Cards"
+        }
+
+        
     })
 }
 Draw.addEventListener("click",handlceClickDraw);
