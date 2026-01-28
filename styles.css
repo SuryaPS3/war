@@ -1,0 +1,15 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+
+}
+
+.button{
+    background-color: burlywood;
+    
+}
