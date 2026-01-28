@@ -57,13 +57,6 @@ War/
 2. Open `index.html` in any modern web browser
 3. Start playing immediately!
 
-### Using Docker
-If you have Docker set up:
-```bash
-docker run -d -p 8080:80 war-game
-```
-Then access the game at `http://localhost:8080`
-
 ## 🌐 API Integration
 
 This game uses the [Deck of Cards API](https://deckofcardsapi.com/) for:
