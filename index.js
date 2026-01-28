@@ -7,16 +7,22 @@ let score1 = 0
 let score2 = 0
 
 function handleClickNewDeck(){
-    fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
+    return fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
         .then(res=>res.json())
         .then(data=>{
             deckId = data.deck_id
-            console.log(deckId)
+            console.log('New deck created:', deckId)
+            return deckId
         })
 }
 NewDeck.addEventListener("click",handleClickNewDeck);
 
-function handlceClickDraw(){
+async function handlceClickDraw(){
+    // Auto-generate deck if not exists
+    if(deckId === ''){
+        await handleClickNewDeck()
+    }
+    
     fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
     .then(res=>res.json())
     .then(data=>{
