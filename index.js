@@ -33,7 +33,7 @@ function handlceClickDraw(){
         if(remainingCards===0){
             Draw.disabled=true
             Draw.innerText="Game Over! No More Cards Left"
-            document.getElementById('header').innerText=`${winner} is the Winner!`
+            document.getElementById('header').innerText=`${winner}`
         }
         
         
