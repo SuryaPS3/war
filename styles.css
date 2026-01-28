@@ -1,0 +1,34 @@
+*{
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    min-height:100vh;
+    background-image: url('table.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+
+}
+
+button{
+    background-color: rgb(255, 226, 63);
+    background-size: cover;
+}
+
+button#New-Deck {
+    font-size: 1.2em;
+    padding: 5px;
+    align-self: stretch;
+}
+button#Draw {
+    font-size: 1.2em;
+    padding: 5px;
+    align-self: stretch;
+}
